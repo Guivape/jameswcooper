@@ -4,8 +4,6 @@ from tkinter import *
 from tkinter import messagebox
 
 
-
-
 class Builder():
     # write slogan out in a message box
     def write_slogan():

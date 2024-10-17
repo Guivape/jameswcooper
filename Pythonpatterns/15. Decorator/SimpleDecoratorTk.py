@@ -1,10 +1,6 @@
-"""Decorator demo using Tkinter widgets
-Hovering over top two buttons converts them from
-flat to raised until the mouse exits"""
+
 from tkinter import *
 
-# Derived Button intercepts mouse entry and changes
-# the decoration of the button from flat to raised
 class Decorator(Button):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
@@ -27,13 +23,12 @@ class DButton(Decorator):
     def __init__(self, master, **kwargs):
         super().__init__(master, text="D Button")
 
-# creates the user interface
+
 class Builder():
     def build(self):
         root = Tk()
         root.geometry("200x100")
         root.title("Tk buttons")
-        #create two decorated buttons and one normal one
         cbut = CButton(root)
         dbut = DButton(root)
         qbut = Button(root, text="Quit", command=quit)
@@ -47,6 +42,5 @@ def main():
     Builder().build()
     mainloop()
 
-###  Here we go  ####
 if __name__== "__main__":
     main()
